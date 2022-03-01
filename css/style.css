@@ -4,7 +4,7 @@ main #my-contenitore{
 }
 
 main #my-contenitore #my-contenitore-carosello{
-    height: 65vh;
+    height: 70vh;
     width: 70%;
 }
 
@@ -13,8 +13,24 @@ main #my-contenitore .my-jumbotron{
     width: 80%;
 }
 
+main #my-contenitore .my-contenitore-thumbnails{
+    width: 20%;
+    height: 100%;
+}
+
+main #my-contenitore .my-contenitore-thumbnails .my-button{
+    left: 50%;
+    transform: translate(-50%);
+}
+
 main #my-contenitore .my-thumbnails {
     height: calc(100% / 5);
-    width: 20%;
+    width: 100%;
     border: black solid 2px;
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
