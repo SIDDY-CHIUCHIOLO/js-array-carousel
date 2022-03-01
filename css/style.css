@@ -1,0 +1,20 @@
+main #my-contenitore{
+    height: 100vh;
+    width: 100%;
+}
+
+main #my-contenitore #my-contenitore-carosello{
+    height: 65vh;
+    width: 70%;
+}
+
+main #my-contenitore .my-jumbotron{
+    height: 100%;
+    width: 80%;
+}
+
+main #my-contenitore .my-thumbnails {
+    height: calc(100% / 5);
+    width: 20%;
+    border: black solid 2px;
+}
