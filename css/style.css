@@ -11,6 +11,7 @@ main #my-contenitore #my-contenitore-carosello{
 main #my-contenitore .my-jumbotron{
     height: 100%;
     width: 80%;
+    display:none;
 }
 
 main #my-contenitore .my-contenitore-thumbnails{

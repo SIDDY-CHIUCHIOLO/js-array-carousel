@@ -6,18 +6,42 @@ const items = [
     'img/05.jpg'
 ];
 
-const title = [
-    'Svezia',
-    'Svizzera',
-    'Gran Bretagna',
-    'Germania',
-    'Paradise'
-]
+let jumbatronWrapper = "";
 
-const text = [
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    'Lorem ipsum',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+for ( let i = 0; i < items.length; i++){
+    jumbatronWrapper += `<div class="my-jumbotron bg-danger float-start">
+    <img class="w-100" src="${items[i]}" alt="img-random">
+    </div>`
+}
+
+const caroselloWrapper = document.getElementById("my-contenitore-carosello");
+caroselloWrapper.innerHTML += jumbatronWrapper;
+
+
+const jumbotronElements = document.getElementsByClassName("my-jumbotron");
+console.log(jumbotronElements);
+
+jumbotronElements[0].classList.add("d-inline");
+
+
+
+
+const bottoneNext = document.getElementById("bottone-avanti");
+console.log(bottoneNext);
+const bottoneBack = document.getElementById("bottone-indietro");
+console.log(bottoneBack);
+
+
+let activeItems = 0;
+
+bottoneNext.addEventListener("click", function () {
+    jumbotronElements[activeItems].classList.remove("d-inline");
+    activeItems++;
+    jumbotronElements[activeItems].classList.add("d-inline");  
+})
+
+bottoneBack.addEventListener("click", function () {
+    jumbotronElements[activeItems].classList.remove("d-inline");
+    activeItems--;
+    jumbotronElements[activeItems].classList.add("d-inline");  
+})
