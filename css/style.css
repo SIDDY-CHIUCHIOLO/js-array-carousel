@@ -1,10 +1,11 @@
+
 main #my-contenitore{
     height: 100vh;
     width: 100%;
 }
 
 main #my-contenitore #my-contenitore-carosello{
-    height: 70vh;
+    height: 80vh;
     width: 70%;
 }
 
@@ -22,12 +23,17 @@ main #my-contenitore .my-contenitore-thumbnails{
 main #my-contenitore .my-contenitore-thumbnails .my-button{
     left: 50%;
     transform: translate(-50%);
+    z-index: 2;
 }
 
 main #my-contenitore .my-thumbnails {
     height: calc(100% / 5);
     width: 100%;
-    border: black solid 2px;
+}
+
+main .active{
+    border: solid white 5px;
+    filter: brightness(0.2);
 }
 
 img{
@@ -35,3 +41,4 @@ img{
     height: 100%;
     width: 100%;
 }
+
